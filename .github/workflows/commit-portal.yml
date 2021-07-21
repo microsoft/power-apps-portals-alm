@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       commit_message:
-        description: 'Message for the commit'
+        description: "Message for the commit"
         required: true
 
 jobs:
@@ -13,9 +13,16 @@ jobs:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
+
+      - uses: dawidd6/action-download-artifact@v2
         with:
-          lfs: true
-      
+          workflow: get-pac.yml
+          workflow_conclusion: success
+          branch: main
+          name: pac
+          path: pac
+        name: Download PAC
+
       - name: Authenticate to Dataverse
         run: |
           pac/pac auth create `
@@ -42,7 +49,7 @@ jobs:
         env:
           WEBSITE_ID: f46b70cc-580b-4f1a-87c3-41deb48eb90d
         shell: powershell
-      
+
       - name: Configure git
         run: |
           git config user.name "GitHub Actions"
