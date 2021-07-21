@@ -36,9 +36,13 @@ jobs:
     environment: development
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: dawidd6/action-download-artifact@v2
         with:
-          lfs: true
+          workflow: get-pac.yml
+          workflow_conclusion: success
+          branch: main
+          name: pac
+          path: pac
 
       - uses: actions/download-artifact@v2
         with:
