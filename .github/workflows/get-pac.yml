@@ -1,0 +1,16 @@
+name: Get Pac
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone powerplatform-actions
+        run: git clone https://github.com/microsoft/powerplatform-actions.git powerplatform-actions
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: pac
+          path: powerplatform-actions/dist/pac/tools
