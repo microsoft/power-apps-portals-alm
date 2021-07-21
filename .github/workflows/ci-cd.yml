@@ -61,16 +61,19 @@ jobs:
           branch: main
           name: pac
           path: pac
+        name: Download PAC
 
       - uses: actions/download-artifact@v2
         with:
           name: solution
           path: ${{ runner.temp }}
+        name: Download solution
 
       - uses: actions/download-artifact@v2
         with:
           name: portal
           path: ${{ runner.temp }}/portal
+        name: Download portal
 
       - uses: microsoft/powerplatform-actions/import-solution@v0
         with:
