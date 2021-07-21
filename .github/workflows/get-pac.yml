@@ -10,6 +10,7 @@ jobs:
       - name: Clone powerplatform-actions
         run: |
           git clone https://github.com/microsoft/powerplatform-actions.git powerplatform-actions
+          cd powerplatform-actions
           git checkout dd36029
 
       - uses: actions/upload-artifact@v2
