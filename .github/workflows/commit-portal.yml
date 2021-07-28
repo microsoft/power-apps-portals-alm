@@ -17,7 +17,7 @@ jobs:
       - name: Delete portal folder
         run: rm portal -Recurse -Force -ErrorAction Ignore
 
-      - uses: microsoft/powerplatform-actions/download-paportal@v0
+      - uses: microsoft/powerplatform-actions/download-paportal@fe82057248cb30e566f88e9d9c5d2802dd3ca3b3
         with:
           environment-url: ${{ secrets.URL }}
           app-id: ${{ secrets.APPLICATION_ID }}
