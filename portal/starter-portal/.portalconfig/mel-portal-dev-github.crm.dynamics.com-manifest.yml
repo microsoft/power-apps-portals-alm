@@ -437,6 +437,47 @@ adx_poll:
   DisplayName: True or False Question
   CheckSum: ee532f5f811610f19954ae51a823494b67bf213cdf8a5625ab8ee66fbdd2cce5
   IsDeleted: false
+adx_polloption:
+- RecordId: 58d569be-a6b6-406e-b85b-662e552450b9
+  DisplayName: No
+  CheckSum: 7ead437ab7eacc75e5d369adc15d9d036ae9cc7c2b6ecbc9df53a16c70b123fe
+  IsDeleted: false
+- RecordId: 1b6a6d58-d83b-4d0f-a6ea-b4c902eba4e5
+  DisplayName: Yes
+  CheckSum: 0c5c6a4fceb4ed8ddb53f77d10b8ad0b9a16991058389aa58db083fce7392bc0
+  IsDeleted: false
+- RecordId: 9544fd2a-593e-4d10-9ae8-73541a1b8d0d
+  DisplayName: style1
+  CheckSum: b49334eb903b201b402c907ad4f8828b465b5c7a769d4d0eda747eaa7a7bf584
+  IsDeleted: false
+- RecordId: 67c6a769-a121-4900-b01d-dcb83c4776be
+  DisplayName: style2
+  CheckSum: 6f113cf4e96b554de6300074fa1364d3abd76a544de41915af14c660af4febed
+  IsDeleted: false
+- RecordId: 09645205-2417-40d7-a846-2c80be80868e
+  DisplayName: style3
+  CheckSum: 63c0dbad0a7b0d9c2a46c9781f4b601a29b42d9fd3fed7da9e5206b767c2a5fa
+  IsDeleted: false
+- RecordId: c7eddcc0-40a5-4b6c-bd48-c0a3e12782f2
+  DisplayName: Choice C
+  CheckSum: 18327bbbdbc5c22a48705da28918312164b805357cf2c88f0a63eea2655a6e90
+  IsDeleted: false
+- RecordId: 840c2f3a-3895-4068-aeb0-2565b7b3ad50
+  DisplayName: Choice B
+  CheckSum: 9b7394d16986d3a154f76380753abcbc1f3a7fcd5020996ddbaeb58a3e9e274f
+  IsDeleted: false
+- RecordId: 6298b057-09d8-461c-a9e8-48c738630728
+  DisplayName: Choice A
+  CheckSum: f015810a77b3844e1879504a4236f02f8c728819832d8ef59b963e6f8adc7533
+  IsDeleted: false
+- RecordId: 3704fb22-9a41-4c8e-951d-696cbb5248ca
+  DisplayName: False
+  CheckSum: 775b8106b35c37934547ed8525cd3055da146808d90e829686512bc4a28970b6
+  IsDeleted: false
+- RecordId: 1c1be9a3-cebe-4360-9679-0ddc7f1c248a
+  DisplayName: True
+  CheckSum: 35009b4c0bc5a1d734c3eb4ad413589b439e9a4b135f8c19e7a376f5385d05f6
+  IsDeleted: false
 adx_pollplacement:
 - RecordId: 146d7c94-6091-40f5-8862-052a520835e8
   DisplayName: Sidebar2
