@@ -33,10 +33,10 @@ jobs:
 #          solution-folder: solution
 #          solution-type: Managed
 
-      - uses: actions/upload-artifact@v2
-        with:
-          name: solution
-          path: ${{ runner.temp }}/solution.zip
+#      - uses: actions/upload-artifact@v2
+#        with:
+#          name: solution
+#          path: ${{ runner.temp }}/solution.zip
 
   build_portal:
     runs-on: ubuntu-latest
