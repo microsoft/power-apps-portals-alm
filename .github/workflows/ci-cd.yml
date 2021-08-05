@@ -22,21 +22,21 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-#  build_solution:
-#    runs-on: windows-latest
-#    steps:
-#      - uses: actions/checkout@v2
-#
-#      - uses: microsoft/powerplatform-actions/pack-solution@v0
-#        with:
-#          solution-file: ${{ runner.temp }}/solution.zip
-#          solution-folder: solution
-#          solution-type: Managed
+  build_solution:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v2
 
-#      - uses: actions/upload-artifact@v2
-#        with:
-#          name: solution
-#          path: ${{ runner.temp }}/solution.zip
+      - uses: microsoft/powerplatform-actions/pack-solution@v0
+        with:
+          solution-file: ${{ runner.temp }}/solution.zip
+          solution-folder: solution
+          solution-type: Managed
+
+      - uses: actions/upload-artifact@v2
+        with:
+          name: solution
+          path: ${{ runner.temp }}/solution.zip
 
   build_portal:
     runs-on: ubuntu-latest
@@ -54,11 +54,11 @@ jobs:
     environment: production
     runs-on: windows-latest
     steps:
-#      - uses: actions/download-artifact@v2
-#        with:
-#          name: solution
-#          path: ${{ runner.temp }}
-#        name: Download solution
+      - uses: actions/download-artifact@v2
+        with:
+          name: solution
+          path: solution
+        name: Download solution
 
       - uses: actions/download-artifact@v2
         with:
@@ -66,14 +66,14 @@ jobs:
           path: portal
         name: Download portal
 
-#      - uses: microsoft/powerplatform-actions/import-solution@v0
-#        with:
-#          environment-url: ${{ secrets.URL }}
-#          app-id: ${{ secrets.APPLICATION_ID }}
-#          client-secret: ${{ secrets.CLIENT_SECRET }}
-#          tenant-id: ${{ secrets.TENANT_ID }}
-#          solution-file: ${{ runner.temp }}/solution.zip
-#          run-asynchronously: true
+      - uses: microsoft/powerplatform-actions/import-solution@v0
+        with:
+          environment-url: ${{ secrets.URL }}
+          app-id: ${{ secrets.APPLICATION_ID }}
+          client-secret: ${{ secrets.CLIENT_SECRET }}
+          tenant-id: ${{ secrets.TENANT_ID }}
+          solution-file: solution/solution.zip
+          run-asynchronously: true
 
       - uses: microsoft/powerplatform-actions/upload-paportal@fe82057248cb30e566f88e9d9c5d2802dd3ca3b3
         with:

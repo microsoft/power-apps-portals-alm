@@ -39,13 +39,13 @@ jobs:
       - uses: actions/download-artifact@v2
         with:
           name: solution
-          path: ${{ runner.temp }}
+          path: solution
         name: Download solution
 
       - uses: actions/download-artifact@v2
         with:
           name: portal
-          path: ${{ runner.temp }}/portal
+          path: portal
         name: Download portal
 
       - uses: microsoft/powerplatform-actions/import-solution@v0
@@ -54,7 +54,7 @@ jobs:
           app-id: ${{ secrets.APPLICATION_ID }}
           client-secret: ${{ secrets.CLIENT_SECRET }}
           tenant-id: ${{ secrets.TENANT_ID }}
-          solution-file: ${{ runner.temp }}/solution.zip
+          solution-file: solution/solution.zip
           run-asynchronously: true
 
       - uses: microsoft/powerplatform-actions/upload-paportal@fe82057248cb30e566f88e9d9c5d2802dd3ca3b3
