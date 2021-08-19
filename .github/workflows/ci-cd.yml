@@ -49,7 +49,7 @@ jobs:
 
   deploy:
     needs:
-#      - build_solution
+      - build_solution
       - build_portal
     environment: production
     runs-on: windows-latest
