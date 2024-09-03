@@ -36,13 +36,13 @@ jobs:
     environment: development
     runs-on: windows-latest
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: solution
           path: solution
         name: Download solution
 
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v4.1.7
         with:
           name: portal
           path: portal
